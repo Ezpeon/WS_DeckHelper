@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/newList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="NEW LIST"
+        android:onClick="newListTapped"
+        android:padding="5dp"/>
+
+    <ScrollView
+        android:id="@+id/listsScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/newList" >
+        <TableLayout
+            android:id="@+id/scrollTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1">
+            <TableRow>
+                <TextView
+                    android:id="@+id/deck1"
+                    android:clickable="true"
+                    android:onClick="textclicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="text1" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/deck2"
+                    android:clickable="true"
+                    android:onClick="textclicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="text2" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/deck3"
+                    android:clickable="true"
+                    android:onClick="textclicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="text3" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/deck4"
+                    android:clickable="true"
+                    android:onClick="textclicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="text4" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/deck5"
+                    android:clickable="true"
+                    android:onClick="textclicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="text5" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/deck6"
+                    android:clickable="true"
+                    android:onClick="textclicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="text6" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/deck7"
+                    android:clickable="true"
+                    android:onClick="textclicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="text7" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/deck8"
+                    android:clickable="true"
+                    android:onClick="textclicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="text8" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/deck9"
+                    android:clickable="true"
+                    android:onClick="textclicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="text9" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/deck10"
+                    android:clickable="true"
+                    android:onClick="textclicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="text10" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/deck11"
+                    android:clickable="true"
+                    android:onClick="textclicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="text11" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/deck12"
+                    android:clickable="true"
+                    android:onClick="textclicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="text12" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/deck13"
+                    android:clickable="true"
+                    android:onClick="textclicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="text13" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/deck14"
+                    android:clickable="true"
+                    android:onClick="textclicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="text14" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/deck15"
+                    android:clickable="true"
+                    android:onClick="textclicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="text15" />
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
