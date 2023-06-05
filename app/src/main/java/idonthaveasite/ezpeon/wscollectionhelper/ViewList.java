@@ -162,36 +162,6 @@ public class ViewList extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-/*
-        try {
-            is = new FileInputStream(jsonFile);
-            Toast.makeText(this, "load: new inputstream made", Toast.LENGTH_LONG).show();
-            ByteArrayOutputStream byteOutStream = new ByteArrayOutputStream();
-            Toast.makeText(this, "load: weirdo bytearray created", Toast.LENGTH_LONG).show();
-            int readByte = 0;
-            while(true)
-            {
-                Toast.makeText(this, "load: just before read", Toast.LENGTH_LONG).show();
-                readByte = is.read();
-                if(readByte == -1)
-                {
-                    break;
-                }
-                byteOutStream.write(readByte);
-            }
-            is.close();
-            byteOutStream.flush();
-            byteOutStream.close();
-            byte[] retrievedStringData = byteOutStream.toByteArray();
-            originalJson = new String(retrievedStringData);
-        } catch (FileNotFoundException e) {
-            Toast.makeText(this, "file not found", Toast.LENGTH_LONG).show();
-            tv.setText(e.toString() + "filenotfoud");
-            e.printStackTrace();
-        } catch (IOException e) {
-            tv.setText(e.toString());
-            e.printStackTrace();
-        }*/
 
         Gson gson = new Gson();
         d = gson.fromJson(originalJson.toString(), Deck.class);
@@ -219,13 +189,10 @@ public class ViewList extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("gimme the set");
 
-// Set up the input
         final EditText input = new EditText(this);
-// Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
         input.setInputType(InputType.TYPE_CLASS_TEXT);
         builder.setView(input);
 
-// Set up the buttons
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -272,7 +239,6 @@ public class ViewList extends AppCompatActivity {
     public void attemptToAdd (String set, String card){
 
         File file = new File("res/raw/" + set.toLowerCase() + ".cards");
-        //StringBuilder csvBuilder = new StringBuilder();
         String csvString = null;
         int resID = this.getResources().getIdentifier(set, "raw", this.getPackageName());
         try (InputStream ins = this.getResources().openRawResource(resID)) {
@@ -297,7 +263,6 @@ public class ViewList extends AppCompatActivity {
             toastString ("we got a stinky " + e.toString());
             e.printStackTrace();
         }
-        //String csvString = csvBuilder.toString();
         String [] entries = csvString.split(";");
         toastString ("we have " + entries.length + " entries in our database");
         String name0 = card.replaceAll ("[^A-Za-z0-9]+", "").toLowerCase();
@@ -323,18 +288,6 @@ public class ViewList extends AppCompatActivity {
     public void nameEvent(View v) {
 
         Toast.makeText(this, "deck event triggered", Toast.LENGTH_LONG).show();
-/*
-        try {
-            Toast.makeText(this, "entered out try", Toast.LENGTH_LONG).show();
-            deck = loadDeck(filedeck);
-        } catch (RuntimeException e) {
-            Toast.makeText(this, "entered out catch", Toast.LENGTH_LONG).show();
-            Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
-
-            deck = new Deck("bananba");
-            saveDeck(deck, filedeck);
-        }
-        */
     }
     public void toastString (String s){
         Toast.makeText(this, s, Toast.LENGTH_LONG).show();
