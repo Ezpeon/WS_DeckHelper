@@ -230,7 +230,6 @@ public class ViewList extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 String inputset = input.getText().toString();
-                toastString("set " + inputset);
                 callCardAlert(inputset);
             }
         });
@@ -257,7 +256,6 @@ public class ViewList extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 String inputcardname = input.getText().toString();
-                toastString("card " + inputcardname);
                 attemptToAdd(set, inputcardname);
             }
         });
@@ -274,7 +272,6 @@ public class ViewList extends AppCompatActivity {
     public void attemptToAdd (String set, String card){
 
         File file = new File("res/raw/" + set.toLowerCase() + ".cards");
-        toastString (file.toString());
         //StringBuilder csvBuilder = new StringBuilder();
         String csvString = null;
         int resID = this.getResources().getIdentifier(set, "raw", this.getPackageName());
