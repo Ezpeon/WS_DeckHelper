@@ -197,7 +197,7 @@ public class ViewList extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 String inputset = input.getText().toString();
-                callCardAlert(inputset);
+                callCardAlert(inputset+"");
             }
         });
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -237,7 +237,7 @@ public class ViewList extends AppCompatActivity {
     }
 
     public void attemptToAdd (String set, String card){
-
+        //add different routine if set == ""  (empty string)
         File file = new File("res/raw/" + set.toLowerCase() + ".cards");
         String csvString = null;
         int resID = this.getResources().getIdentifier(set, "raw", this.getPackageName());
