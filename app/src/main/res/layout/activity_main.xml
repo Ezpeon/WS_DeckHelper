@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="NEW LIST"
+        android:text="Placeholder"
         android:onClick="newListTapped"
         android:padding="5dp"/>
 

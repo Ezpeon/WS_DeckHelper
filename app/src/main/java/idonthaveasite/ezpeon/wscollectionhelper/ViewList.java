@@ -68,17 +68,24 @@ public class ViewList extends AppCompatActivity {
             deck = new Deck(deckID);
             saveDeck(deck, filedeck);
         }
-
+        //-----------------------------------------------this can be put in a dedicated startup function
+        TextView dummy = (TextView) findViewById(R.id.dummy);
+        dummy.setText("");
+        dummy.setHeight(1);
+        //----------------------------------------------------------
         updateView();
         final TableLayout tl = (TableLayout) findViewById(R.id.scrollTable);
         ArrayList<Card> thislist = deck.getList();
+        //ArrayList<TextView> TextsList = null;
         for (Card ccc : thislist) {
             // Creation row
             final TableRow tableRow = new TableRow(this);
             tableRow.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.WRAP_CONTENT, TableLayout.LayoutParams.WRAP_CONTENT));
 
-            final TextView text1 = new TextView(this);
+            TextView text1 = new TextView(this);
             text1.setText(ccc.getName() + "\n" +ccc.getFeatures());
+            //text1.setHeight(200);
+            //text1.setGravity(View.TEXT_ALIGNMENT_CENTER);
             int tempID = View.generateViewId();
             viewIDtoCardAddress.put(tempID, ccc.getPNGurl());
             text1.setId (tempID);
