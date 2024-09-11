@@ -23,7 +23,7 @@ public class ViewCard extends AppCompatActivity {
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
             if (extras == null) {
-                pngurl = "https://en.ws-tcg.com/wp/wp-content/images/cardimages/ASAO10/S100_E026.png";
+                pngurl = "https://en.ws-tcg.com/wp/wp-content/images/cardimages/AZL/S102_TE16SP.png";
             } else {
                 pngurl = extras.getString("url");
             }
@@ -47,9 +47,10 @@ public class ViewCard extends AppCompatActivity {
     }
 
     public void displayImage (ImageView v, String url){
-        if (url.equals("https://en.ws-tcg.com/wp/wp-content/images/cardimages/ASAO10/S100_E026.png")){//remove first part of the string
-            //we have this one in drawables
-            v.setImageBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.s100_e026));
+
+        if (url.equals("https://en.ws-tcg.com/wp/wp-content/images/cardimages/AZL/S102_TE16SP.png")){//remove first part of the string
+            //we have this one in drawables for testing
+            v.setImageBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.s102_te16sp));
         } else {
             //we have to download it
             new DownloadImageTask((ImageView) v).execute(url);
