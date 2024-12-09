@@ -33,7 +33,7 @@ public class Side extends AppCompatActivity {
 
     public void buttonfunction (ImageView img) {
 
-        img.setBackgroundResource(R.drawable.s102_te16sp);
+        img.setBackgroundResource(R.drawable.s102_e092);
 
     }
     public void buttonupdate (Button btn) {

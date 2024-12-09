@@ -2,7 +2,6 @@ package idonthaveasite.ezpeon.wscollectionhelper;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
@@ -23,7 +22,7 @@ public class ViewCard extends AppCompatActivity {
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
             if (extras == null) {
-                pngurl = "https://en.ws-tcg.com/wp/wp-content/images/cardimages/AZL/S102_TE16SP.png";
+                pngurl = "https://en.ws-tcg.com/wp/wp-content/images/cardimages/AZL/S102_E092.png";
             } else {
                 pngurl = extras.getString("url");
             }
@@ -48,9 +47,9 @@ public class ViewCard extends AppCompatActivity {
 
     public void displayImage (ImageView v, String url){
 
-        if (url.equals("https://en.ws-tcg.com/wp/wp-content/images/cardimages/AZL/S102_TE16SP.png")){//remove first part of the string
+        if (url.equals("https://en.ws-tcg.com/wp/wp-content/images/cardimages/AZL/S102_E092.png")){//remove first part of the string
             //we have this one in drawables for testing
-            v.setImageBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.s102_te16sp));
+            v.setImageBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.s102_e092));
         } else {
             //we have to download it
             new DownloadImageTask((ImageView) v).execute(url);
